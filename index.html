@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人简历 - 华北电力大学软件工程</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', '微软雅黑', Arial, sans-serif;
+      background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+      color: #222;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 32px 60px 16px 60px;
+      background: transparent;
+    }
+    .navbar .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+    }
+    .navbar nav a {
+      margin: 0 18px;
+      text-decoration: none;
+      color: #222;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .navbar nav a:hover {
+      color: #6366f1;
+    }
+    .navbar .btn {
+      background: #6366f1;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 28px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .navbar .btn:hover {
+      background: #4338ca;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 60px 40px 60px;
+      background: none;
+    }
+    .hero-content {
+      max-width: 540px;
+    }
+    .hero-content h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      line-height: 1.2;
+    }
+    .hero-content p {
+      font-size: 1.15rem;
+      color: #555;
+      margin-bottom: 32px;
+    }
+    .hero-content .actions {
+      display: flex;
+      gap: 18px;
+    }
+    .hero-content .actions .btn-main {
+      background: #6366f1;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 32px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .hero-content .actions .btn-main:hover {
+      background: #4338ca;
+    }
+    .hero-content .actions .btn-link {
+      background: none;
+      color: #6366f1;
+      border: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .hero-img {
+      position: relative;
+      width: 340px;
+      height: 340px;
+      background: #fff;
+      border-radius: 32px;
+      box-shadow: 0 8px 32px rgba(99,102,241,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .hero-img img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #e0e7ef;
+    }
+    .section {
+      margin: 0 auto;
+      max-width: 1100px;
+      padding: 40px 24px 0 24px;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      color: #222;
+    }
+    .skills, .projects, .education, .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+    .skill-card, .project-card, .edu-card, .contact-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(99,102,241,0.06);
+      padding: 28px 24px;
+      flex: 1 1 260px;
+      min-width: 260px;
+      max-width: 340px;
+      margin-bottom: 16px;
+    }
+    .skill-card h3, .project-card h3, .edu-card h3, .contact-card h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .project-card a {
+      color: #6366f1;
+      text-decoration: underline;
+      font-size: 0.98rem;
+    }
+    .contact-card p {
+      margin: 6px 0;
+      font-size: 1rem;
+    }
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+      }
+      .hero-img {
+        margin: 0 auto;
+      }
+      .section {
+        padding: 32px 8px 0 8px;
+      }
+    }
+    @media (max-width: 600px) {
+      .navbar, .hero {
+        padding: 18px 8px;
+      }
+      .section {
+        padding: 24px 4px 0 4px;
+      }
+      .hero-img {
+        width: 220px;
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">华北电力大学 · 软件工程</div>
+    <nav>
+      <a href="#about">关于我</a>
+      <a href="#skills">技能</a>
+      <a href="#projects">项目</a>
+      <a href="#education">教育</a>
+      <a href="#contact">联系</a>
+    </nav>
+  </div>
+  <div class="hero">
+    <div class="hero-content">
+      <h1>你好，我是华北电力大学<br>软件工程本科生赵曼</h1>
+      <p>华北电力大学在读<br>
+        初次接触机器学习，通过"基于YOLOv8的摔倒检测的报警系统"项目，深入理解了数据标注优化、数据集训练等模型训练流程。<br>
+        熟悉Python、C++、Java，注重编程能力提升，坚持在Leetcode等平台练习算法题。<br>
+        热爱探索系统架构设计，曾参与"分布式多车探索系统"开发，负责界面设计，体验高内聚低耦合的架构价值。<br>
+        学习能力强，兴趣广泛，喜欢旅游、跳舞、画画，坚信人生是场马拉松，Mess up boldly，grow up brutally！<br>
+        目前正自学机器学习并挑战三十天英语影子跟读。</p>
+    </div>
+    <div class="hero-img">
+      <img src="Manny.jpg" alt="证件照">
+    </div>
+  </div>
+  <div class="section" id="skills">
+    <div class="section-title">技能特长</div>
+    <div class="skills">
+      <div class="skill-card">
+        <h3>编程语言</h3>
+        <p>Python, C++, Java</p>
+      </div>
+      <div class="skill-card">
+        <h3>开发框架与工具</h3>
+        <p>YOLOv8, OpenCV, Redis, RabbitMQ, JavaSwing,SQL Server</p>
+      </div>
+      <div class="skill-card">
+        <h3>算法与系统设计</h3>
+        <p>熟悉MVC、黑板架构、接口隔离、组件解耦，持续算法训练（Leetcode）</p>
+      </div>
+      <div class="skill-card">
+        <h3>英语与学习能力</h3>
+        <p>CET-4 587分<br> CET-6 460分
+          <br>正在进行<a href=" https://v.douyin.com/wDO5U_gF7nI/ 5@4.com :4pm">三十天英语影子跟读</a>挑战，具备良好自学能力</p>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="projects">
+    <div class="section-title">项目经历</div>
+    <div class="projects">
+      <div class="project-card">
+        <h3>基于YOLOv8的摔倒检测报警系统</h3>
+        <p><b>技术栈：</b> Python、PySide6、YOLOv8、OpenCV</p>
+        <p><b>项目简介：</b><br>
+        团队开发了一套基于深度学习的摔倒检测报警系统。通过查阅YOLOv8官方文档和示例代码，集成YOLOv8模型，并在Kaggle上拉取"坐、站、摔"三类行为的数据集进行训练，实现了对图片和视频中摔倒行为的自动检测。系统采用PySide6开发桌面可视化界面，检测到摔倒时自动弹窗警告并循环播放报警音。
+        </p>
+        <p><b>主要职责与成果：</b><br>
+        - 负责数据集收集与标注，掌握了数据预处理和模型训练的基本流程。<br>
+        - 集成YOLOv8官方代码，实现摔倒检测模型的本地推理与结果可视化。<br>
+        - 设计并实现多线程报警机制，保证界面流畅不卡顿。<br>
+        - 完成了从数据准备、模型训练到前端集成的完整闭环，提升了工程实现能力。<br>
+        - 项目演示视频：见下方。
+        </p>
+        <p><b>个人反思：</b><br>
+        目前对YOLOv8底层原理和参数调优还不够深入，后续计划系统学习相关理论知识，提升模型理解和优化能力。
+        </p>
+        <a href=" https://b23.tv/mMzslmw">项目详情</a>
+      </div>
+      <div class="project-card">
+        <h3>分布式多车探索系统</h3>
+        <p>2025.05 - 2025.06</p>
+        <p><b>项目简介：</b><br>
+        开发了一套基于黑板架构的分布式多车探索系统。系统通过Redis实现数据共享，RabbitMQ负责各组件的调度通信。支持多角色登录（配置员、回放分析员、超级管理员），实现了地图配置、实时探索、过程回放、用户权限管理等功能。
+        </p>
+        <p><b>主要职责与成果：</b><br>
+        - 负责系统界面设计与实现，包括登录、注册、用户管理、地图配置、探索回放等模块。<br>
+        - 支持配置员身份进行地图（随机/自定义/障碍物/小车）配置，实时观察探索过程，回放分析员可回放并分析导航路径，超级管理员可管理用户权限。<br>
+        - 各用户界面代码分离管理，并采用MVC架构，实现高内聚低耦合。<br>
+        - 针对界面性能和用户体验，进行了多项优化：<br>
+        &nbsp;&nbsp;• <b>增量渲染</b>：采用脏区域标记+局部repaint，减少90%无效绘制。<br>
+        &nbsp;&nbsp;• <b>车辆图像缓存</b>：使用HashMap缓存方向-图片，减少IO操作。<br>
+        &nbsp;&nbsp;• <b>批量数据获取</b>：用Redis SCAN代替KEYS，O(1)复杂度避免阻塞。<br>
+        &nbsp;&nbsp;• <b>离屏缓冲</b>：采用BufferedImage双缓冲，消除界面闪烁。<br>
+        - 实现了多角色、多终端的分布式协作与权限管理。
+        </p>
+        <p><b>个人反思：</b><br>
+        忽略了配置员与运行员身份分离的需求，导致多台电脑部署时，配置员界面重启会重置系统数据，影响探索过程。后续应将身份分离，提升系统健壮性和多端协作体验。
+        </p>
+        <a href=" https://b23.tv/YbozXrO">项目详情</a>
+      </div>
+      <div class="project-card">
+        <h3>个人成长与算法训练</h3>
+        <p>2022.09 - 至今</p>
+        <p>坚持Leetcode、洛谷等多平台算法题训练，持续提升编程与算法能力。</p>
+        <a href="https://leetcode.cn/u/song-hao-jiu-wo-xian-dai/">Leetcode主页</a>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="education">
+    <div class="section-title">教育经历</div>
+    <div class="education">
+      <div class="edu-card">
+        <h3>华北电力大学</h3>
+        <p>软件工程（本科在读）</p>
+        <p>2021.09 - 2025.06</p>
+        <p>主修课程：数据结构、操作系统、数据库原理、软件工程、人工智能等</p>
+        <p>
+          <a href="成绩单_成绩证明.pdf" download style="color:#6366f1;text-decoration:underline;margin-right:16px;">下载成绩单与成绩证明</a>
+        </p>
+      </div>
+      <div class="edu-card">
+        <h3>获奖情况</h3>
+        <p>蓝桥杯Python A组省二等奖<br>全国大学生数学竞赛省二等奖<br>全国大学生三创赛省二等奖<br>全国大学生创新创业大赛中期答辩省级良好<br>国才杯英语演讲比赛校一等奖及若干校级奖项</p>
+        <p>
+          <a href="获奖证明.pdf" download style="color:#6366f1;text-decoration:underline;margin-right:16px;">下载获奖证明</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="contact">
+    <div class="section-title">联系方式</div>
+    <div class="contact">
+      <div class="contact-card">
+        <h3>邮箱</h3>
+        <p>15856652788@163.com</p>
+      </div>
+      <div class="contact-card">
+        <h3>微信</h3>
+        <p>15856652788</p>
+      </div>
+    </div>
+  </div>
+  <!-- 生活照轮播区 -->
+  <div class="section" id="life-gallery">
+    <div class="section-title">我的生活剪影</div>
+    <p>我性格开朗活泼，热爱生活，喜欢旅游、跳舞、画画、摄影，
+      <br>也喜欢尝试新事物，喜欢学习新知识，喜欢挑战自己，喜欢探索未知。
+      <br>我非常希望能加入老师的团队！</p>
+    <div class="hero-img" id="life-carousel" style="margin:0 auto;max-width:340px;">
+      <img src="life1.jpg" alt="生活照1" id="carousel-img" style="transition:opacity 0.5s;width:100%;border-radius:24px;box-shadow:0 4px 16px rgba(99,102,241,0.10);">
+      <button id="prev-btn" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(99,102,241,0.7);border:none;border-radius:50%;width:36px;height:36px;color:#fff;font-size:1.5rem;cursor:pointer;">&#8592;</button>
+      <button id="next-btn" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(99,102,241,0.7);border:none;border-radius:50%;width:36px;height:36px;color:#fff;font-size:1.5rem;cursor:pointer;">&#8594;</button>
+    </div>
+  </div>
+  <script>
+    // 生活照轮播脚本
+    const images = ["life1.jpg", "life2.jpg", "life3.jpg","life4.jpg","life5.jpg","life6.jpg"];
+    let current = 0;
+    const imgEl = document.getElementById('carousel-img');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    function showImg(idx) {
+      imgEl.style.opacity = 0;
+      setTimeout(() => {
+        imgEl.src = images[idx];
+        imgEl.alt = `生活照${idx+1}`;
+        imgEl.style.opacity = 1;
+      }, 200);
+    }
+    prevBtn.onclick = () => {
+      current = (current - 1 + images.length) % images.length;
+      showImg(current);
+    };
+    nextBtn.onclick = () => {
+      current = (current + 1) % images.length;
+      showImg(current);
+    };
+    // 自动轮播
+    setInterval(() => {
+      current = (current + 1) % images.length;
+      showImg(current);
+    }, 2000);
+  </script>
+</body>
+</html> 
